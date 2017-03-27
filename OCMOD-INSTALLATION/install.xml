@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<modification>
+    <name>CoinFide Payment</name>
+    <version>1.0</version>
+    <code>CoinFidePayment</code>
+    <author>Murat Temirov</author>
+    <link>http://www.opencartextensions.eu</link>
+</modification>
