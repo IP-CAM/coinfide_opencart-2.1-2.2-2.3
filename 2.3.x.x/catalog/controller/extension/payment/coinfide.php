@@ -54,7 +54,12 @@ class ControllerExtensionPaymentCoinfide extends Controller {
         $baddress = new \Coinfide\Entity\Address();
         $baddress->setCity($order_info['payment_city']);
         $baddress->setFirstAddressLine($order_info['payment_address_1']);
-        $baddress->setPostalCode($order_info['payment_postcode']);
+
+        if (!empty($order_info['payment_postcode'])) {
+            $baddress->setPostalCode($order_info['payment_postcode']);
+        }else{
+            $baddress->setPostalCode('111396');
+        }
 
         $payment_country = $this->model_localisation_country->getCountry($order_info['payment_country_id']);
 
